@@ -1,0 +1,156 @@
+*{
+    font-family: 'Sen', sans-serif;
+    overflow: hidden;
+}
+.screen{
+    position: absolute;
+    height: 100%;
+    width:100%;
+    background-color:#ff1940;
+}
+.heading{
+    color:white;
+    text-align: center;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    color:#ff1940;
+    background-color: white;
+    padding:20px;
+    border-radius:30px;
+    min-height: 300px;
+}
+.head{
+    text-align: center;
+}
+input{
+    outline: none;
+    border: none;
+    border-bottom: 1px solid grey;
+    width:100%;
+    line-height: 30px;
+    margin-top: 20px;
+}
+label{
+    position: relative;
+    top: -45px;
+    transition: 0.2s;
+}
+input:focus +label{
+    top:-60px;
+}
+textarea:focus+label{
+    top:-60px;
+}
+.btn{
+    color: white;
+    outline: none;
+    border:none;
+    background-color: #ff1940;
+    margin-top: 30px;
+    padding: 10px;
+    border-radius: 50%;
+    width:40px;
+    margin-left: 80%;
+}
+.signuplink{
+    color: white;
+    margin-top: 70px;
+    text-align: center;
+}
+.cred{
+    text-align: center;
+    color:white;
+}
+.mainbtn{
+    outline:none;
+    width:100%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    background: none;
+    border:none;
+    border-radius: 30px;
+    border: 3px solid #ff1940;
+    padding: 10px;
+    color:#ff1940; 
+}
+.descL{
+    position: relative;
+    top: -100px;
+    transition: 0.2s;
+}
+.desc{
+    scroll-behavior: scroll;
+    outline: none;
+    resize: none;
+    height:100px;
+    width: 100%;
+    border:none;
+    border-bottom: 1px solid grey;
+    transition: 0.3s;
+}
+.desc:focus+.descL{
+    top:-120px;
+}
+.logoutbtn{
+    position: fixed;
+    top: 94%;
+    left:33%;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    background-color: white;
+    border: none;
+    border: 3px solid #ff1940;
+    color: #ff1940;
+    font-size: 20px;
+}
+.logoutprompt{
+    border-radius:10px;
+    top:30%;
+    left: 11%;
+    border:2px solid #ff1940;
+    height: 400px;
+    width: 75%;
+    background-color: white;
+    z-index: 100;
+    position: fixed;
+    text-align: center;
+    text-anchor: middle;
+}
+.logoutprompt p{
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    color:#ff1940;
+    font-size: 30px;
+}
+.logoutprompt button{
+    position: relative;
+    top: 50%;
+    color:#ff1940;
+    padding:20px;
+    background-color: white;
+    outline:none;
+    border-radius: 30px;
+    border: 3px solid #ff1940;
+    color:#ff1940; 
+    margin-bottom: 20px;
+    width: 80%;
+    font-size: 20px;
+}
+.backbtn{
+    margin-left: 10%;
+    padding:20px;
+    background-color: white;
+    outline:none;
+    border-radius: 30px;
+    border: 3px solid #ff1940;
+    color:#ff1940; 
+    margin-bottom: 20px;
+    width: 80%;
+    font-size: 20px;
+}

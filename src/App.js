@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import {BrowserRouter as Router,Switch,Route} from 'react-router-dom'
+import './Stylesheets/Userlogin.css'
+import UserLogin from './Components/UserLogin.js'
+import UserSignup from './Components/UserSignup.js'
+import StoreLogin from './Components/StoreLogin.js'
+import StoreSignup from './Components/StoreSignup.js'
+import StoreList from './Components/StoreList.js'
+import StoreHome from './Components/StoreHome.js'
+import Home from './Components/Home.js'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Router>
+      <Switch>
+        <Route path='/userlogin' component={UserLogin}/>
+        <Route path='/usersignup' component={UserSignup}/>
+        <Route path='/storelogin' component={StoreLogin}/>
+        <Route path='/storesignup' component={StoreSignup}/>
+        <Route path='/storehome' component={StoreHome}/>
+        <Route path='/storelist/:uid' component={StoreList}/>
+        <Route path='/' exact component={Home}/>
+      </Switch>
+    </Router>
+  )
 }
 
-export default App;
+export default App
