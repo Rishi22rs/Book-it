@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 const Home=()=>{
     return(
     <div className="screen">
-      <h1 className="heading" style={{fontSize:60}}>Book it</h1>
+      <h1 className="heading" style={{fontSize:60}}>Book it Now</h1>
       <div className="form">
         <h2 style={{textAlign:"center"}}>User page</h2>
         <h3>Book all of your appointments or any order from any store in your locality all in one place.</h3>
