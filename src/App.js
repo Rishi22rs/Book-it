@@ -8,6 +8,7 @@ import StoreSignup from './Components/StoreSignup.js'
 import StoreList from './Components/StoreList.js'
 import StoreHome from './Components/StoreHome.js'
 import Home from './Components/Home.js'
+import Request from './Components/Request'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path='/storesignup' component={StoreSignup}/>
         <Route path='/storehome' component={StoreHome}/>
         <Route path='/storelist/:uid' component={StoreList}/>
+        <Route path='/requests/:uid' component={Request}/>
         <Route path='/' exact component={Home}/>
       </Switch>
     </Router>

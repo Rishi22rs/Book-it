@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import axios from 'axios'
-import {Link} from 'react-router-dom'
+import {Link, Redirect} from 'react-router-dom'
 import '../Stylesheets/Userlogin.css'
 import Arrow from '../Assets/arrow.png'
 
@@ -8,6 +8,8 @@ const StoreLogin=()=>{
     const [username,setUsername]=useState('')
     const [pass,setPass]=useState('')
     const [wrongPass,setWrongPass]=useState(false)
+    const [redirect,setRedirect]=useState(false)
+    const [data,setData]=useState('')
 
     const InsertData=()=>{
         let formData=new FormData()
@@ -18,6 +20,10 @@ const StoreLogin=()=>{
             console.log(res)
             if(res.data.uid==="-1")
                 setWrongPass(true)
+            else {
+                setData(res.data.uid)
+                setRedirect(true)
+            }
         })
     }
     
@@ -25,6 +31,9 @@ const StoreLogin=()=>{
         e.preventDefault()
         InsertData()
     }
+
+    if(redirect)
+        return<Redirect to={`/requests/${data}`} />
 
     return(
         <div className="screen">
